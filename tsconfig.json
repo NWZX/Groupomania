@@ -23,7 +23,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
-    "incremental": true,
+    //"incremental": true,
     "noFallthroughCasesInSwitch": true 
   },
   "include": [
