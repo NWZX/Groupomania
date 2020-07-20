@@ -1,0 +1,115 @@
+$acrylic: blur(30px) saturate(125%);
+$title: 22px;
+$sub-title: 20px;
+$sub-sub-title: 16px;
+$ms-depth-16: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
+$ms-depth-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+
+$breakpoint-tablet: 768px;
+$breakpoint-larges: 992px;
+$breakpoint-extra-larges: 1200px;
+
+.ac-block{
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: $acrylic;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+
+    h1{
+        color: rgba(0, 0, 0, 0.9);
+        font-size: $title;
+    }
+    h2{
+        font-size: $sub-title;
+    }
+    h3{
+        font-size: $sub-sub-title;
+    }
+    input, textarea, select{
+        border: 0;
+        padding: 5px;
+        border-radius: 5px;
+        width: 90%;
+        vertical-align: middle;
+        margin: 10px;
+        transition: linear 200ms;
+        box-shadow: $ms-depth-8;
+
+        &:focus{
+            outline: none;
+            box-shadow: $ms-depth-16;
+            transition: linear 200ms;
+        }
+    }
+    input[type=checkbox]{
+        box-shadow: none;
+        
+    }
+    input[type=checkbox]:focus{
+            display: inline;
+            box-shadow: none;
+            outline: solid 1px;
+        }
+    a{
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+    padding: 0;
+    transition: linear 100ms;
+
+        &.active {
+            border-bottom: 3px solid darkgray;
+            transition: linear 100ms;
+        }
+    }
+}
+.stick{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 61%;
+}
+
+
+@media (min-width: $breakpoint-extra-larges) {
+    .user-icon{
+        width: 30%;
+    }
+    .logo{
+        width: 10%;
+    }
+}
+@media (min-width: $breakpoint-larges) {
+    .ac-block{
+        border-radius: 10px;
+    }
+    .user-icon{
+        width: 25%;
+    }
+    .logo{
+        width: 10%;
+    }
+}
+@media (max-width: $breakpoint-larges) {
+    .user-icon{
+        width: 20%;
+    }
+    .logo{
+        width: 10%;
+    }
+    .stick{
+        width: 100%;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .user-icon{
+        width: 20%;
+    }
+    .logo{
+        width: 10%;
+    }
+}
