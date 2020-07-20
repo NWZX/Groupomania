@@ -2,6 +2,8 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import store from "store";
 import { IComment } from "./CommentServices";
 
+const host = "http://207.180.251.133:5000";
+
 export interface IPost {
   id: number;
   user: {
@@ -70,7 +72,7 @@ export class PostServices {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           Authorization: `Bearer ${store.get("token", "")}`,
           "Content-Type": "application/json",
@@ -113,7 +115,7 @@ export class PostServices {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           Authorization: `Bearer ${store.get("token", "")}`,
           "Content-Type": "application/json",
@@ -147,7 +149,7 @@ export class PostServices {
         formData.append("image", file);
         const configFile: AxiosRequestConfig = {
           method: "post",
-          url: "http://localhost:4000/upload",
+          url: host + "/upload",
           headers: {
             Authorization: `Bearer ${store.get("token", "")}`,
           },
@@ -179,7 +181,7 @@ export class PostServices {
 
         const config: AxiosRequestConfig = {
           method: "post",
-          url: "http://localhost:4000/graphql",
+          url: host + "/graphql",
           headers: {
             Authorization: `Bearer ${store.get("token", "")}`,
             "Content-Type": "application/json",
@@ -218,7 +220,7 @@ export class PostServices {
         formData.append("image", file);
         const configFile: AxiosRequestConfig = {
           method: "post",
-          url: "http://localhost:4000/upload",
+          url: host + "/upload",
           headers: {
             Authorization: `Bearer ${store.get("token", "")}`,
           },
@@ -249,7 +251,7 @@ export class PostServices {
 
         const config: AxiosRequestConfig = {
           method: "post",
-          url: "http://localhost:4000/graphql",
+          url: host + "/graphql",
           headers: {
             Authorization: `Bearer ${store.get("token", "")}`,
             "Content-Type": "application/json",
@@ -278,7 +280,7 @@ export class PostServices {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           Authorization: `Bearer ${store.get("token", "")}`,
           "Content-Type": "application/json",

@@ -1,6 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import store from "store";
 
+const host = "http://207.180.251.133:5000";
+
 export interface IAuthServiceResponse {
   token: string;
   username: string;
@@ -58,7 +60,7 @@ export class AuthService {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           Authorization: `Bearer ${store.get("token", "")}`,
           "Content-Type": "application/json",
@@ -90,7 +92,7 @@ export class AuthService {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           "Content-Type": "application/json",
         },
@@ -122,7 +124,7 @@ export class AuthService {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           "Content-Type": "application/json",
         },
@@ -147,7 +149,7 @@ export class AuthService {
 
       const config: AxiosRequestConfig = {
         method: "post",
-        url: "http://localhost:4000/graphql",
+        url: host + "/graphql",
         headers: {
           Authorization: `Bearer ${store.get("token", "")}`,
           "Content-Type": "application/json",
