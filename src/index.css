@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #d8d0c5;
+  background-color: #ffffff;
 }
 
 code {
@@ -21,4 +21,13 @@ code {
 #root{
   display: flex;
   min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  html, body{
+    margin: auto;
+    width:80%;
+    overflow-x:hidden;
+    padding: 1%;
+}
 }

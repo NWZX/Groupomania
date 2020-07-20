@@ -1,9 +1,11 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import { Depths } from "@uifabric/fluent-theme/lib/fluent/FluentDepths";
+import "./UIButton.scss";
 
 interface IButtonProps {
   text: string;
-  onClick: () => void;
+  className?: string;
+  onClick: () => void | Promise<void>;
 }
 
 class UIButton extends React.Component<IButtonProps> {
@@ -16,15 +18,18 @@ class UIButton extends React.Component<IButtonProps> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e: MouseEvent): void {
+  handleClick(
+    e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+  ): void {
     e.preventDefault();
     this.props.onClick();
   }
 
   render(): JSX.Element {
+    const classItem = this.props.className ? " " + this.props.className : "";
     return (
       <button
-        className="col-8 bg-light"
+        className={"bg-light" + classItem}
         style={{ boxShadow: Depths.depth8 }}
         onClick={this.handleClick}
       >
