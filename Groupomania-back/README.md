@@ -2,7 +2,9 @@
 
 Use a mariaDB or MySQLDB
 
-# -Add a .env file with :
+## Before start :
+
+### add a .env file :
 
 JWT_SECRET=YourKey
 
@@ -16,8 +18,18 @@ DB_HOST=localhost
 
 DB_PORT=Database Port
 
-# Start
+### Linux (only) :
 
-npm install
+### `chmod +x node_modules/webp-converter/bin/libwebp_linux/bin/cwebp`
 
-npm start
+### `chmod +x node_modules/webp-converter/bin/libwebp_linux/bin/gif2webp`
+
+## Start :
+
+### `npm install`
+
+Install the required dependency.
+
+### `npm start`
+
+Runs the app.
