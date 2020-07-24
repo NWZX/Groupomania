@@ -28,7 +28,7 @@ DB_PORT=Database Port
 
 ## Start :
 
-Import **tableForDB.sql** in your database.
+**(Before)** Import **tableForDB.sql** in your database.
 
 ### `npm install`
 
