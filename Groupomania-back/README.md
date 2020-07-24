@@ -2,6 +2,8 @@
 
 Use a mariaDB or MySQLDB
 
+Tables for database are in : **tableForDB.sql**
+
 ## Before start :
 
 ### add a .env file :
@@ -25,6 +27,8 @@ DB_PORT=Database Port
 ### `chmod +x node_modules/webp-converter/bin/libwebp_linux/bin/gif2webp`
 
 ## Start :
+
+Import **tableForDB.sql** in your database.
 
 ### `npm install`
 
