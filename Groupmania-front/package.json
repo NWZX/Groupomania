@@ -13,7 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/store": "^2.0.2",
     "@uifabric/fluent-theme": "^7.1.101",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "graphql": "^15.3.0",
     "node-sass": "^4.14.1",
